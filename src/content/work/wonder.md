@@ -34,7 +34,7 @@ C'est ainsi que j'ai mis le pied dans Symfony 7 et son écosystème : Twig, Mail
 - HTML/CSS
 - Doctrine
 - server Mysql
-- <a href = "https://github.com/Lisadev84/wonder" target="_blank">lien vers gitlab</a>
+- <a href = "https://github.com/Lisadev84/wonder" target="_blank">lien vers github</a>
 
 
 
