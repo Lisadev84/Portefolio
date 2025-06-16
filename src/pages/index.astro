@@ -38,13 +38,21 @@ const projects = (await getCollection('work'))
 						<Pill><Icon icon="code" size="1.33em"/>Développeur</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Concepteur</Pill>
 					</div>
+					<div class="tech-stack">
+						<Pill><Icon icon="code" size="1.33em"/>Java</Pill>
+						<Pill><Icon icon="code" size="1.33em"/>Spring</Pill>
+						<Pill><Icon icon="code" size="1.33em"/>AWS</Pill>
+					</div>
+					<div class="tech-stack">
+						<Pill><Icon icon="code" size="1.33em"/>PHP</Pill>
+						<Pill><Icon icon="code" size="1.33em"/>Symfony</Pill>
+					</div>
 				</Hero>
-
 				<img
 					alt="photo de portrait"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/photoportefolio.png"
 				/>
 			</header>
 
@@ -54,8 +62,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mes derniers projets</h3>
-					<p>Découvrez mes derniers projets réalisés</p>
+					<h3>Mes projets</h3>
+					<p>Découvrez un aperçu de mes réalisations récentes</p>
 				</header>
 
 				<div class="gallery">
@@ -68,13 +76,6 @@ const projects = (await getCollection('work'))
 							))
 						}
 					</Grid>
-				</div>
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						Tous les projets
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
 				</div>
 			</section>
 		</main>
@@ -95,13 +96,22 @@ const projects = (await getCollection('work'))
 		display: none;
 	}
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+	.tech-stack {
+		display: none;
 	}
+
+
+	.hero img {
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 50%;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		max-width:200px;
+		max-height:200px;
+
+	}
+
 
 	@media (min-width: 50em) {
 		.hero {
@@ -117,11 +127,23 @@ const projects = (await getCollection('work'))
 			gap: 0.5rem;
 		}
 
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
-			object-fit: cover;
+		.tech-stack {
+			margin-top: 0.5rem;
+			display: flex;
+			gap: 0.5rem;
 		}
+
+
+		.hero img {
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			object-fit: cover;
+			max-width:300px;
+			max-height:300px;
+			justify-self: center;
+			align-self: center;
+		}
+
 	}
 
 	/* ====================================================== */
@@ -178,10 +200,6 @@ const projects = (await getCollection('work'))
 			gap: 5rem;
 		}
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
-
 		.section-header {
 			grid-area: header;
 			font-size: var(--text-lg);
@@ -191,17 +209,8 @@ const projects = (await getCollection('work'))
 			font-size: var(--text-4xl);
 		}
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
-
 		.gallery {
 			grid-area: gallery;
-		}
-
-		.cta {
-			grid-area: cta;
 		}
 	}
 

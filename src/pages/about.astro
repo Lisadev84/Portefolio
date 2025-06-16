@@ -13,8 +13,8 @@ import Hero from '../components/Hero.astro';
 				tagline="Mon parcours et mes compétences"
 			>
 				<img
-					width="1553"
-					height="873"
+					width="1280"
+					height="717"
 					src="/assets/about.jpg"
 					alt=""
 				/>
@@ -25,21 +25,35 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<p>
 						Après une carrière enrichissante auprès de différents publics, j'ai ressenti le besoin de trouver un nouveau chemin
-            professionnel qui correspondait davantage à mes aspirations. Mon intérêt pour l'informatique s'est manifesté à travers l'utilisation variée de logiciels et d'applications dans mes fonctions précédentes et a suscité une curiosité accrue pour l'envers du décor technologique.<br>
-            Cette fascination pour la technologie et le désir de contribuer de manière créative à l'ère numérique
-            m'ont poussés à me reconvertir dans le domaine du développement web. J'accorde une grande importance à la communication, à l'autodidact et au partage de connaissances.<br>
-          </p>
+            			professionnel qui correspondait davantage à mes aspirations. Mon intérêt pour l'informatique s'est manifesté à travers l'utilisation variée de logiciels et d'applications dans mes fonctions précédentes et a suscité une curiosité accrue pour l'envers du décor technologique.<br>
+            			Cette fascination pour la technologie et le désir de contribuer de manière créative à l'ère numérique
+            			m'ont poussés à me reconvertir dans le domaine du développement web. J'accorde une grande importance à la communication, à l'autodidact et au partage de connaissances.
+						Je suis développeuse backend spécialisée Java/SpringBoot avec une montée en compétences continue sur AWS.
+						Formée en environnement projet réel, je développe Propri’Opti comme un cas concret de SaaS modulaire et évolutif.<br>
+          			</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Formation</h2>
 				<div class="content">
 					<p>
-						- Bac + 2 Développeur Web et Web Mobile (RNCP) ;  <br>
-						- Bac + 3/4 Concepteur Développeur d'Application(RNCP); <br>
-						- Certification PHP8, organisme de formation dyma.fr ; <br>
-						- Certification GoogleCarrer Cours 1&2 Data analyste ;
-
+						Stage JirAWS Learning – Java / Spring Boot / DevOps AWS <br>
+						Encadré par Guillaume JACQUELET (CTO, +10 ans Java & AWS)<br/>
+						<span class="text-gras">Formation individuelle intensive</span><br/>
+						- Centrée sur la stack Java / Spring Boot / AWS et les pratiques métier d’un développeur cloud-ready.<br/>
+						- Suivi quotidien : code, architecture, collaboration<br/>
+						<span class="text-gras">Préparation à la gestion du Saas Propri'Opti</span><br/>
+						- Conception, développement en Java 21 / Spring Boot,<br/>
+						- APIs REST, intégration MySQL (JPA / Hibernate)<br/>
+						- Déploiement cloud-native sur AWS (VPC, ALB, EC2, RDS, IAM) <br/>
+						- Mise en production Linux, sécurité (Spring Security, RGPD), monitoring, bonnes pratiques DevOps et travail en équipe agile.
+					</p>
+					<br>
+					<p>
+						- Bac + 2 Développeur Web et Web Mobile (RNCP)   <br>
+						- Bac + 3/4 Concepteur Développeur d'Application(RNCP) <br>
+						- Certification PHP8, organisme de formation dyma.fr  <br>
+						- Certification GoogleCarrer Module 1, 2 & 3 Data analyste
 					</p>
 				</div>
 			</section>
@@ -66,7 +80,13 @@ import Hero from '../components/Hero.astro';
 		margin-top: 1.5rem;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
+		max-width: 70%;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
+
 
 	section {
 		display: flex;
@@ -98,6 +118,9 @@ import Hero from '../components/Hero.astro';
 	}
 	p {
 		text-align: justify;
+	}
+	.text-gras {
+		font-weight: 600;
 	}
 
 	@media (min-width: 50em) {

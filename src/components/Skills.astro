@@ -6,17 +6,25 @@ import Icon from './Icon.astro';
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>De la conception...</h2>
-		<p>J'aime travailler sur un projet from scratch, élaborer et étudier sa faisabilité. J'apprécie le back et la gestion de bases de données .</p>
+		<span class="text-gras">Imaginer, structurer, modéliser.</span>
+		<p>Compréhension des besoins, cadrage fonctionnel, modélisation d’architectures robustes et évolutives.
+			Mon approche repose sur une analyse métier rigoureuse et une structuration technique durable.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>... à la production</h2>
-		<p>Les différentes étapes qui la constitue sont parfois rudes mais gratifiantes.</p>
+		<h2>... à la mise en  production</h2>
+		<span class="text-gras">Du code aux utilisateurs finaux.</span>
+			<p>Je prends en charge l’implémentation backend, l’API REST, la conteneurisation (Docker)
+			et le déploiement cloud (AWS). J’accorde une grande importance à la qualité logicielle,
+			aux tests, à la sécurité et à la performance dans un environnement de production.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>...en passant par la montée en compétences</h2>
-		<p>Mon objectif aujourd'hui est de pouvoir intégrer une société, au côté d'autres pairs et d'être confrontée à la réalité du terrain, pour pouvoir monter en compétences.</p>
+		<h2>... en passant par la montée en compétences</h2>
+		<span class="text-gras">Apprendre au contact du réel.</span>
+		<p>Je me forme en continu au sein d’un accompagnement senior en environnement quasi-industriel.
+			Mon objectif : renforcer mes savoir-faire, collaborer avec des équipes exigeantes
+			et contribuer à des projets porteurs de sens et de valeur.</p>
 	</div>
 </section>
 
@@ -45,6 +53,10 @@ import Icon from './Icon.astro';
 
 	p {
 		text-align: justify;
+	}
+
+	.text-gras {
+		font-weight: 600;
 	}
 
 	@media (min-width: 50em) {

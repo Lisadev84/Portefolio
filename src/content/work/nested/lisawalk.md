@@ -7,12 +7,13 @@ description: |
   L'application Lisawalk est dédié à la randonnées, à la proposition d'itinéraires et de téléchargement de traces gpx. 
 tags:
   - Analyse de projet
-  - Front
-  - Back
+  - HTML5/CSS
+  - Bootstrap
+  - PHP8
   
 ---
 <p style = "text-align:justify;">
-Lisawalk est un projet personnel développé dans le cadre de la soutance pour le titre de Développeur Web et Web mobile. 
+Lisawalk est un projet personnel développé dans le cadre de la soutenance du  titre de Développeur Web et Web mobile. 
 Le projet a été initié par étape : analyse du projet, définition du schéma de navigation et de la charte graphique, modélisation de données avec "Merise" et création de la base de données, développement du site et mise en production.
 
 Initialement, l'application permettait à l'utilisateur de s'inscrire et d'avoir accès à une liste de randonnées, détaillée par un descriptif, accompagnées d'une carte de localisation avec la possibilité de télécharger la trace gpx.
@@ -48,4 +49,4 @@ Pour l'administrateur :
 - FTP : Filezilla
 - Hébergement : O2Switch, <a href = "https://www.lisawalk.fr" target="_blank">lien vers le site</a>
 
-Le projet peut encore évoluer avec le partage de randonnées provenant des utilisateurs, la possibilité d'imprimer la carte itinéraire en pdf... 
+Le projet évoluera encore avec le partage de randonnées provenant des utilisateurs, la possibilité d'imprimer la carte itinéraire en pdf... 
