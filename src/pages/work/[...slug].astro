@@ -45,6 +45,7 @@ const { Content } = await entry.render();
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
+					{/* Ajout d'une classe pour l'image principale du projet */}
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content">
 						<Content />
@@ -109,6 +110,30 @@ const { Content } = await entry.render();
 		border: 1px solid var(--gray-800);
 	}
 
+	.main-project-image {
+		max-width: 60%; /* Réduit la largeur maximale de l'image */
+		height: auto; /* Maintient les proportions de l'image */
+		display: block; /* Nécessaire pour centrer avec margin: auto */
+		margin: 2rem auto; /* Centre l'image et ajoute de l'espacement vertical */
+		border-radius: 1.5rem; /* Style existant */
+		box-shadow: var(--shadow-sm); /* Style existant */
+		background: var(--gradient-subtle); /* Style existant */
+		border: 1px solid var(--gray-800); /* Style existant */
+	}
+
+	/* Styles modifiés pour les images DANS le contenu Markdown */
+	.content :global(img) {
+		max-width: 70%; /* Ajustez cette valeur pour les images intégrées */
+		height: auto; /* Maintient les proportions */
+		display: block; /* Nécessaire pour centrer avec margin: auto */
+		margin: 1.5rem auto; /* Centre l'image et ajoute de l'espacement vertical */
+		border-radius: 1.5rem; /* Style existant */
+		box-shadow: var(--shadow-sm); /* Style existant */
+		background: var(--gradient-subtle); /* Style existant */
+		border: 1px solid var(--gray-800); /* Style existant */
+	}
+
+
 	.content :global(blockquote) {
 		font-size: var(--text-lg);
 		font-family: var(--font-brand);
@@ -146,6 +171,22 @@ const { Content } = await entry.render();
 
 		.content :global(blockquote) {
 			font-size: var(--text-2xl);
+		}
+
+		/* Ajustement pour les écrans plus larges si besoin */
+		.main-project-image,
+		.content :global(img) {
+			max-width: 60%; /* Les images peuvent être un peu plus petites sur grand écran */
+		}
+
+		/* Media query pour les écrans plus petits afin d'éviter que les images soient trop petites */
+		@media (max-width: 768px) {
+			.main-project-image,
+			.content :global(img) {
+				max-width: 90%; /* Les images prennent plus de place sur les petits écrans */
+			}
+
+
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 ---
-title: Le cercle des pêcheurs
+title: Blog 
 publishDate: 2024-08-21 00:00:00
 img: /assets/logo-pecheurs.png
 img_alt: Logo du blog "le cercle des pêcheurs"
@@ -12,7 +12,7 @@ tags:
 
 
 <p style = "text-align:justify;">
-Cette application a été réalisée au cours de la formation PHP et adapté pour un membre de la famille passionné de pêche. L'objectif premier était l'apprentissage de la partie back-end. Le Front est resté sobre.
+Cette application a été réalisée au cours de la formation PHP8 et adapté pour un membre de la famille passionné de pêche. L'objectif premier était l'apprentissage de la partie back-end. Le Front est resté sobre.
 Chaque utilisateurs peut soumettre, consulter et éditer un article. 
 Le backoffice gère les utilisateurs, les sessions et les articles.
 </p> 

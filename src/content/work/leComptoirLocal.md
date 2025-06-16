@@ -1,10 +1,10 @@
 ---
-title: Le comptoir local
+title: Marketplace
 publishDate: 2024-11-20 00:00:00
 img: /assets/logo-comptoir-local.png
 img_alt: Logo de l'application
 description: |
-  Le Comptoir Local est un projet en cours développé en collaboration avec l'organisation Github Pinqo.
+  Le Comptoir Local est un projet d'équipe développé en collaboration avec des membres de l'organisation Github Pinqo.
 tags:
   - SpringBoot/Java
   - React
