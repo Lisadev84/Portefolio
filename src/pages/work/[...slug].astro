@@ -37,7 +37,25 @@ const { Content } = await entry.render();
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
-							</div>
+							  
+								{entry.data.projectUrl && (
+								  <a
+									class="pill-link"
+									href={entry.data.projectUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label={entry.data.projectLabel ?? 'Voir le projet'}
+								  >
+									<Pill>
+									  <span class="pill-link-content">
+										<Icon icon="arrow-right" />
+										{entry.data.projectLabel ?? 'Voir le projet'}
+									  </span>
+									</Pill>
+								  </a>
+								)}
+							  </div>
+							  
 							<p class="description">{entry.data.description}</p>
 						</div>
 					</Hero>
@@ -77,8 +95,24 @@ const { Content } = await entry.render();
 	}
 
 	.tags {
-		display: flex;
-		gap: 0.5rem;
+  		display: flex;
+  		flex-wrap: wrap;
+  		gap: 0.5rem;
+		justify-content: center;
+  		width: 100%;
+  		max-width: 100%;
+		align-items: stretch;
+	}
+
+	.pill-link {
+  		display: inline-flex;
+  		text-decoration: none;
+	}
+
+	.pill-link :global(.pill-link-content) {
+  		display: inline-flex;
+  		align-items: center;
+  		gap: 0.35rem;
 	}
 
 	.description {

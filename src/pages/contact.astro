@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+const emailAddress = 'isa.moriamez@gmail.com';
+const mailtoHref =
+  `mailto:${emailAddress}?subject=${encodeURIComponent('Contact — Portfolio')}&body=${encodeURIComponent(
+    "Bonjour Isabelle,\n\nJe vous contacte suite à votre portfolio.\n\n"
+  )}`;
+---
+
+<BaseLayout title="Contact" description="Contacter Isabelle Moriamez">
+  <main class="wrapper stack gap-10 contact">
+    <header class="stack gap-4">
+      <h1>Contact</h1>
+      <p class="intro">
+        Pour me joindre rapidement, vous pouvez copier mon email ou ouvrir votre application de messagerie.
+      </p>
+    </header>
+
+    <section class="card stack gap-4" aria-label="Coordonnées de contact">
+      <div class="row">
+        <div class="label">Email</div>
+        <div class="value">
+            <span class="email" title={emailAddress}>{emailAddress}</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="secondary" type="button" id="copy-email">
+          Copier l’email
+        </button>
+
+        <a class="secondary" href={mailtoHref}>
+          Envoyer un e-mail
+          <Icon icon="paper-plane-tilt" size="1.1em" />
+        </a>
+      </div>
+
+      <p class="hint" id="copy-feedback" aria-live="polite"></p>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const copyButton = document.getElementById('copy-email');
+  const feedbackElement = document.getElementById('copy-feedback');
+
+  copyButton?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('isa.moriamez@gmail.com');
+      if (feedbackElement) {
+        feedbackElement.textContent = 'Email copié dans le presse-papiers.';
+      }
+    } catch (error) {
+      // Fallback (si permissions/clipboard indisponibles)
+      window.prompt('Copiez cet email :', 'isa.moriamez@gmail.com');
+    }
+  });
+</script>
+
+<style>
+  .contact {
+    padding-block: 3rem;
+  }
+
+  .intro {
+    max-width: 65ch;
+  }
+
+  .card {
+    border: 1px solid var(--gray-800);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .value {
+  min-width: 0; 
+}
+
+  .label {
+    color: var(--gray-200);
+    font-weight: 600;
+  }
+
+  .email {
+    font-family: var(--font-brand);
+    color: var(--gray-100);
+    word-break: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.95rem, 3.8vw, 1.125rem);
+
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    max-width: 28rem;
+  }
+
+  /* Bouton et lien secondaires (copier + mailto) */
+  .secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999rem;
+
+    background: transparent;
+    border: 1px solid var(--gray-800);
+    color: var(--gray-100);
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .secondary:hover,
+  .secondary:focus {
+    border-color: var(--gray-700);
+  }
+
+  .hint {
+    min-height: 1.25rem;
+    color: var(--gray-200);
+    font-size: var(--text-sm);
+  }
+
+  @media (min-width: 50em) {
+    .contact {
+      padding-block: 4rem;
+    }
+
+    .card {
+      padding: 2rem;
+    }
+
+    .actions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: none;
+    }
+
+    .secondary {
+      width: auto;
+    }
+  }
+</style>

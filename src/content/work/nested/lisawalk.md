@@ -7,7 +7,6 @@ description: |
   L'application Lisawalk est dédié à la randonnées, à la proposition d'itinéraires et de téléchargement de traces gpx. 
 tags:
   - Analyse de projet
-  - HTML5/CSS
   - Bootstrap
   - PHP8
   
@@ -46,7 +45,6 @@ Pour l'administrateur :
 - Bibliothèque : Leaflet pour les cartes de localisation et traces gpx
 - Base de données relationnelle : Mysql / interface graphique : MysqlWorbench
 - Backend : PHP8
-- FTP : Filezilla
-- Hébergement : O2Switch, <a href = "https://www.lisawalk.fr" target="_blank">lien vers le site</a>
+- - <a href = "https://github.com/Lisadev84/lisawalk" target="_blank">lien vers github</a>
 
 Le projet évoluera encore avec le partage de randonnées provenant des utilisateurs, la possibilité d'imprimer la carte itinéraire en pdf... 
