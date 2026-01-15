@@ -6,9 +6,9 @@ img_alt: Logo de l'application
 description: |
   Le Comptoir Local est un projet d'équipe développé en collaboration avec des membres de l'organisation Github Pinqo.
 tags:
-  - SpringBoot/Java
   - React
   - API
+  - SpringBoot/Java
 ---
 
 ##### Objectif

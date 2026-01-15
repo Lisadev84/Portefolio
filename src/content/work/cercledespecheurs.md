@@ -5,9 +5,11 @@ img: /assets/logo-pecheurs.png
 img_alt: Logo du blog "le cercle des pêcheurs"
 description: |
   Blog de partage d'articles déposés par les utilisateurs sur la pratique de la pêche
+projectUrl: "https://www.lecercledespecheurs.ovh"
+projectLabel: Voir l’app  
 tags:
-  - PHP
-  - NGINX VPS
+  - PHP8
+  - NGINX 
 ---
 
 
@@ -35,6 +37,6 @@ Le backoffice gère les utilisateurs, les sessions et les articles.
 - VPS(Virtual Private Server)
 - Mise en production : Nginx, php-fpm, MySQL et configuration de HTTPS avec Cerbot et Letsencrypt
 - Hébergement : OVH
-- <a href = "https://www.lecercledespecheurs.ovh" target="_blank">lien vers le site</a>
+
 
 
